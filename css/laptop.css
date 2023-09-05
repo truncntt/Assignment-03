@@ -8,9 +8,12 @@
   box-sizing: border-box;
   outline: none;
   text-decoration: none;
-  transition: all 0.2s linear;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.hide {
+  display: none !important;
 }
 
 /* 
@@ -55,12 +58,12 @@ body {
   background-color: #fff;
   overflow-x: hidden;
 }
-body .container {
+body .container-div {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-body .container #banner {
+body .container-div #banner {
   background: url(../images/banner_2.png) no-repeat;
   min-height: 60vh;
   background-size: cover;
@@ -72,7 +75,7 @@ body .container #banner {
   justify-content: center;
   object-position: 16rem 0;
 }
-body .container #banner h1 {
+body .container-div #banner h1 {
   position: absolute;
   top: 23%;
   left: 50%;
@@ -82,7 +85,7 @@ body .container #banner h1 {
   mix-blend-mode: normal;
   font-weight: 300;
 }
-body .container #banner span {
+body .container-div #banner span {
   position: absolute;
   font-size: 1.6rem;
   top: 28%;
@@ -90,12 +93,12 @@ body .container #banner span {
   transform: translate(-50%, -68%);
   color: #fff;
 }
-body .container #nav-bar {
+body .container-div #nav-bar {
   width: 100%;
   height: 7rem;
   background-color: #fff;
 }
-body .container #nav-bar .nav-bar-info {
+body .container-div #nav-bar .nav-bar-info {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: 7.6rem;
@@ -104,7 +107,7 @@ body .container #nav-bar .nav-bar-info {
   place-content: center;
   height: 100%;
 }
-body .container #nav-bar .nav-bar-info a {
+body .container-div #nav-bar .nav-bar-info a {
   display: flex;
   width: 15rem;
   padding: auto;
@@ -117,15 +120,15 @@ body .container #nav-bar .nav-bar-info a {
   font-size: 1.625rem;
   font-weight: 400;
 }
-body .container #nav-bar .nav-bar-info a:last-child {
+body .container-div #nav-bar .nav-bar-info a:last-child {
   border-right: 1px solid rgba(0, 0, 0, 0.1882352941);
 }
-body .container #nav-bar .nav-bar-info a:hover {
+body .container-div #nav-bar .nav-bar-info a:hover {
   font-size: 1.8rem;
   font-weight: 500;
   color: #189CDB;
 }
-body .container #nav-bar .nav-bar-info .info-to-bar {
+body .container-div #nav-bar .nav-bar-info .info-to-bar {
   display: inline-block;
   width: 30rem;
   padding-top: 1rem;
@@ -134,24 +137,24 @@ body .container #nav-bar .nav-bar-info .info-to-bar {
   justify-content: center;
   justify-items: center;
 }
-body .container #nav-bar .nav-bar-info .info-to-bar h1 {
+body .container-div #nav-bar .nav-bar-info .info-to-bar h1 {
   font-size: 2.43rem;
   font-weight: 400;
 }
-body .container #nav-bar .nav-bar-info .info-to-bar span {
+body .container-div #nav-bar .nav-bar-info .info-to-bar span {
   margin-bottom: 10px;
   font-size: 1.15em;
   opacity: 0.5;
   margin-inline-start: 0;
 }
-body .container #about .about-content {
+body .container-div #about .about-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   min-height: 43rem;
   align-items: flex-start;
 }
-body .container #about .about-content #target {
+body .container-div #about .about-content #target {
   background-color: #F5F5F5;
   flex: 1 1 10rem;
   position: relative;
@@ -159,54 +162,71 @@ body .container #about .about-content #target {
   height: 100%;
   width: 100%;
   padding: 8rem 5.4rem;
+  padding-left: 10%;
 }
-body .container #about .about-content #target p {
+body .container-div #about .about-content #target p {
   font-size: 1.5rem;
   font-weight: 100;
   color: #827A96;
 }
-body .container #about .about-content #personal-info {
+body .container-div #about .about-content #personal-info {
   flex: 1 1 10rem;
   min-height: 43rem;
   width: 100%;
   height: 100%;
   padding: 8rem 5.4rem 0 5.4rem;
   background-color: #F0F0F0;
+  padding-right: 10%;
 }
-body .container #about .about-content #personal-info ul {
+body .container-div #about .about-content #personal-info form div .form-control {
+  line-height: 2;
+  font-size: 1.2rem;
+}
+body .container-div #about .about-content #personal-info form div {
+  margin: 1.5rem 0 2.2rem 0;
+  color: #827A96;
+  font-size: 1.2rem;
+}
+body .container-div #about .about-content #personal-info form .btn {
+  background-color: #189CDB;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #189CDB;
+}
+body .container-div #about .about-content #personal-info ul {
   list-style: none;
 }
-body .container #about .about-content #personal-info ul li {
+body .container-div #about .about-content #personal-info ul li {
   cursor: pointer;
   line-height: 3rem;
   font-size: 1.5rem;
   color: #827A96;
 }
-body .container #about .about-content #personal-info ul li a {
+body .container-div #about .about-content #personal-info ul li a {
   color: #827A96;
 }
-body .container #about .about-content #personal-info ul li a:hover {
+body .container-div #about .about-content #personal-info ul li a:hover {
   color: #189CDB;
 }
-body .container #about .about-content #personal-info ul li span {
+body .container-div #about .about-content #personal-info ul li span {
   color: black;
 }
-body .container #about .about-content #personal-info ul li:last-child {
+body .container-div #about .about-content #personal-info ul li:last-child {
   margin: 20px 2px;
   font-size: 1.625rem;
 }
-body .container #about .about-content #personal-info ul li i:hover {
+body .container-div #about .about-content #personal-info ul li i:hover {
   font-size: 2.5rem;
 }
-body .container #about .about-content .section-title {
+body .container-div #about .about-content .section-title {
   margin-bottom: 3rem;
   font-size: 2.6rem;
 }
-body .container #job-info {
+body .container-div #job-info {
   margin-top: 3.25rem;
   margin-bottom: 3.25rem;
 }
-body .container #job-info .information {
+body .container-div #job-info .information {
   display: grid;
   grid-template-columns: repeat(3, 38rem);
   gap: 3rem;
@@ -215,50 +235,77 @@ body .container #job-info .information {
   align-items: stretch;
   justify-items: center;
 }
-body .container #job-info .information div {
-  padding: 3.25rem;
+body .container-div #job-info .information div {
+  padding: 3rem;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1882352941);
 }
-body .container #job-info .information div h1 {
+body .container-div #job-info .information div h1 {
   color: #333333;
   font-size: 2.6rem;
   font-weight: 500;
 }
-body .container #job-info .information div ul li {
+body .container-div #job-info .information div ul li {
   list-style-type: inherit;
   list-style-position: outside;
   font-size: 3rem;
   color: #189CDB;
-  margin-top: 2.2rem;
+  margin-top: 1.5rem;
   margin-left: 2rem;
   padding-left: 1rem;
 }
-body .container #job-info .information div ul li h4 {
+body .container-div #job-info .information div ul li h4 {
   font-size: 1.6rem;
   font-weight: 400;
   color: black;
 }
-body .container #job-info .information div ul li p {
+body .container-div #job-info .information div ul li p {
   font-size: 1.3rem;
   font-weight: 100;
   color: #827A96;
 }
-body .container #job-info .information div ul li .title-time {
+body .container-div #job-info .information div ul li .title-time {
   font-size: 1.2rem;
   margin: 5px 0;
 }
-body .container #job-info .information div ul li .title-time span {
+body .container-div #job-info .information div ul li .title-time span {
   background-color: #189CDB;
   padding: 4px;
   border-radius: 7px;
   color: white;
 }
-body .container #job-info .information .info-big {
+body .container-div #job-info .information .info-big {
   height: 100%;
   width: 100%;
 }
-body .container #job-info .information .info-big div {
+body .container-div #job-info .information .info-big .view-more-job {
+  position: relative;
+}
+body .container-div #job-info .information .info-big .view-more-job button {
+  position: relative;
+  top: 1rem;
+  right: 0;
+  min-width: 12rem;
+  min-height: 4rem;
+  background-color: #EEF1B7;
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  gap: 1rem;
+  opacity: 0;
+  border: none;
+}
+body .container-div #job-info .information .info-big .view-more-job button:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+body .container-div #job-info .information .info-big div {
   padding: 0;
   border: none;
   display: flex;
@@ -266,11 +313,12 @@ body .container #job-info .information .info-big div {
   justify-content: space-between;
   align-items: baseline;
 }
-body .container #job-info .information .info-big div .icons-info {
+body .container-div #job-info .information .info-big div .icons-info {
+  height: 1.5rem;
   font-size: 6rem;
   color: #A8B1B6;
 }
-body .container #job-info .information .info-big #info-small-like {
+body .container-div #job-info .information .info-big .info-small-like {
   display: grid;
   border: none;
   grid-template-rows: repeat(1, auto);
@@ -281,7 +329,7 @@ body .container #job-info .information .info-big #info-small-like {
   justify-content: center;
   margin-top: 2.2rem;
 }
-body .container #job-info .information .info-big #info-small-like div {
+body .container-div #job-info .information .info-big .info-small-like div {
   border: none;
   width: 100%;
   padding: 0;
@@ -289,7 +337,7 @@ body .container #job-info .information .info-big #info-small-like div {
   align-items: center;
   justify-content: center;
 }
-body .container #job-info .information .info-big #info-small-like div div {
+body .container-div #job-info .information .info-big .info-small-like div div {
   position: relative;
   display: inline-block;
   color: #B7DEF3;
@@ -300,104 +348,104 @@ body .container #job-info .information .info-big #info-small-like div div {
   box-shadow: 0 0 5px #a6d6f0;
   border: 1px solid #B7DEF3;
 }
-body .container #job-info .information .info-big #info-small-like div div i {
+body .container-div #job-info .information .info-big .info-small-like div div i {
   font-size: 2.7rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body .container #job-info .information .info-big #info-small-like div p {
+body .container-div #job-info .information .info-big .info-small-like div p {
   font-size: 1.4rem;
   text-align: center;
   color: #777777;
 }
-body .container #job-info .information .info-big #info-tick {
+body .container-div #job-info .information .info-big .info-tick {
   display: block;
   margin-top: 2.2rem;
 }
-body .container #job-info .information .info-big #info-tick div {
+body .container-div #job-info .information .info-big .info-tick div {
   display: inline-block;
   font-size: 1.4rem;
   color: #777777;
   margin-top: 5px;
 }
-body .container #job-info .information .info-big #info-tick div div {
+body .container-div #job-info .information .info-big .info-tick div div {
   width: 50px;
   height: 1.5px;
   background-color: #F3F3F3;
   margin-right: 7px;
 }
-body .container #job-info .information .info-big #info-tick div .tick {
+body .container-div #job-info .information .info-big .info-tick div .tick {
   background-color: #189CDB;
 }
-body .container #certificate {
+body .container-div #certificate {
   background-color: #F7F7F7;
   width: 100%;
 }
-body .container #certificate .certificate-info {
+body .container-div #certificate .certificate-info {
   margin: auto 17%;
   margin-bottom: 3.25rem;
 }
-body .container #certificate .certificate-info .section-title {
+body .container-div #certificate .certificate-info .section-title {
   padding-top: 5.4rem;
   padding-bottom: 5.4rem;
 }
-body .container #certificate .certificate-info .certificate-div {
+body .container-div #certificate .certificate-info .certificate-div {
   display: grid;
   grid-template-columns: repeat(2, auto);
   border-bottom: 1px solid #DDCCA3;
   padding-bottom: 3.25rem;
   align-items: center;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-content: center;
   justify-content: start;
   justify-items: center;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate:first-child {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate:first-child {
   margin-right: 2rem;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate:nth-child(2n) {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate:nth-child(2n) {
   border-left: 1px solid #DDCCA3;
   width: 100%;
   padding-left: 20px;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate img {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate img {
   width: 12vw;
   height: auto;
   background-size: cover !important;
   background-position: center !important;
   background: no-repeat;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate div {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate div {
   display: block;
   padding-left: 15px;
   min-width: 30rem;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate div h4 {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate div h4 {
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
 }
-body .container #certificate .certificate-info .certificate-div .items-certificate div p {
+body .container-div #certificate .certificate-info .certificate-div .items-certificate div p {
   font-size: 1.3rem;
   font-weight: 100;
   color: #827A96;
 }
-body .container #certificate .certificate-info .certificate-div:nth-child(3) {
+body .container-div #certificate .certificate-info .certificate-div:nth-child(3) {
   border: none;
   margin-top: 3.25rem;
 }
-body .container #project {
+body .container-div #project {
   margin: 40px 17% 0 17%;
 }
-body .container #project div h1 {
+body .container-div #project div h1 {
   margin-bottom: 1.25rem;
 }
-body .container #project div .projects {
+body .container-div #project div .projects {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: center;
@@ -405,21 +453,21 @@ body .container #project div .projects {
   align-items: center;
   justify-items: center;
 }
-body .container #project div .projects .project {
+body .container-div #project div .projects .project {
   padding: 2.5rem;
   text-align: center;
 }
-body .container #project div .projects .project div {
+body .container-div #project div .projects .project div {
   width: 100%;
   height: 400px;
   overflow: hidden;
 }
-body .container #project div .projects .project div img {
+body .container-div #project div .projects .project div img {
   width: 100%;
   height: auto;
   object-position: top;
 }
-body .container #project div .projects .project .project-table {
+body .container-div #project div .projects .project .project-table {
   width: 100%;
   border-collapse: collapse;
   height: 300px;
@@ -429,24 +477,24 @@ body .container #project div .projects .project .project-table {
   color: #777777;
   font-size: 13px;
 }
-body .container #project div .projects .project .project-table tr {
+body .container-div #project div .projects .project .project-table tr {
   height: auto;
 }
-body .container #project div .projects .project .project-table tr:first-child {
+body .container-div #project div .projects .project .project-table tr:first-child {
   height: 100%;
 }
-body .container #project div .projects .project .project-table tr td {
+body .container-div #project div .projects .project .project-table tr td {
   border: 1px solid #ccc;
   text-align: left;
   padding: 0.625rem;
 }
-body .container #project div .projects .project .project-table tr .tb-cv {
+body .container-div #project div .projects .project .project-table tr .tb-cv {
   padding-left: 20px;
   font-size: 1.625rem;
   font-weight: 400;
   color: black;
 }
-body .container #project div .projects .project .project-table tr .info-cv {
+body .container-div #project div .projects .project .project-table tr .info-cv {
   display: flex;
   padding-left: 20px;
   justify-content: flex-start;
@@ -454,7 +502,7 @@ body .container #project div .projects .project .project-table tr .info-cv {
   align-content: center;
   flex-wrap: wrap;
 }
-body .container #project div .projects .project .project-table tr .info-cv span {
+body .container-div #project div .projects .project .project-table tr .info-cv span {
   background-color: #189CDB;
   padding: 2px 15px 2px 15px;
   border-radius: 13px;
@@ -462,48 +510,48 @@ body .container #project div .projects .project .project-table tr .info-cv span 
   font-size: 1.2rem;
   text-align: center;
 }
-body .container #project div .projects .project .project-table tr .info-cv span, body .container #project div .projects .project .project-table tr .info-cv i, body .container #project div .projects .project .project-table tr .info-cv p {
+body .container-div #project div .projects .project .project-table tr .info-cv span, body .container-div #project div .projects .project .project-table tr .info-cv i, body .container-div #project div .projects .project .project-table tr .info-cv p {
   margin-right: 20px;
 }
-body .container #project div .projects .project .project-table tr .info-cv i {
+body .container-div #project div .projects .project .project-table tr .info-cv i {
   font-size: 19px;
   color: #777777;
 }
-body .container #project div .projects .project .project-table tr .describe-cv {
+body .container-div #project div .projects .project .project-table tr .describe-cv {
   display: grid;
   grid-template-columns: 80px auto;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
-body .container #project div .projects .project .project-table tr .describe-cv p:last-child {
+body .container-div #project div .projects .project .project-table tr .describe-cv p:last-child {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box;
 }
-body .container #project div .projects .project .project-table tr .mission-cv {
+body .container-div #project div .projects .project .project-table tr .mission-cv {
   display: grid;
   grid-template-columns: 80px auto;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
-body .container #project div .projects .project .project-table tr .tech-cv {
+body .container-div #project div .projects .project .project-table tr .tech-cv {
   display: grid;
   grid-template-columns: 80px auto;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
-body .container #footer {
+body .container-div #footer {
   background-color: #E8E9EB;
 }
-body .container #footer .footer-info {
+body .container-div #footer .footer-info {
   margin: 0 20%;
   padding: 40px 0 40px 0;
 }
-body .container #footer .footer-info ul {
+body .container-div #footer .footer-info ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -511,12 +559,12 @@ body .container #footer .footer-info ul {
   justify-content: center;
   align-items: center;
 }
-body .container #footer .footer-info ul li {
+body .container-div #footer .footer-info ul li {
   display: flex;
   list-style-type: none;
   margin-right: 20px;
 }
-body .container #footer .footer-info ul li a {
+body .container-div #footer .footer-info ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -526,25 +574,25 @@ body .container #footer .footer-info ul li a {
   font-size: 15px;
   align-items: center;
 }
-body .container #footer .footer-info ul li a i {
+body .container-div #footer .footer-info ul li a i {
   font-size: 25px;
 }
-body .container #footer .footer-info ul li a:hover {
+body .container-div #footer .footer-info ul li a:hover {
   color: #189CDB;
 }
-body .container .section-title {
+body .container-div .section-title {
   font-size: 2.6em;
   font-weight: 100;
   color: #333333;
 }
-body .container p {
+body .container-div p {
   display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-body .container h4 {
+body .container-div h4 {
   display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -559,7 +607,7 @@ body .container h4 {
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
   html {
-    font-size: 58%;
+    font-size: 57%;
     scroll-padding: 7rem;
   }
 }

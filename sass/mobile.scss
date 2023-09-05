@@ -47,6 +47,9 @@
             .about-content {
                 display: grid !important;
                 grid-template-columns: repeat(1, 100%) !important;
+                ul {
+                    padding-left: 0 !important;
+                }
             }
         }
 
@@ -57,7 +60,14 @@
                 gap: 3rem !important;
                 margin: 0 2% !important;
                 .info-big {
-                    #info-small-like {
+                    .view-more-job {
+                        button {
+                            min-width: 11.5rem !important;
+                            min-height: 3.5rem !important;
+                        }
+                    }
+                    .info-small-like {
+                        margin-top: 3.2rem !important;
                         div {
                             width: 7vw;
                             display: flex !important;

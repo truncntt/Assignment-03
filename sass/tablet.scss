@@ -13,8 +13,30 @@
         display: none !important;
         }
 
-        #job-info {
+        #about {
+            .about-content {
+                #target {
+                    width: 50% !important;
+                    padding-left: 5% !important;
+                }
+                
+                #personal-info {
+                    width: 50% !important; 
+                    padding-right: 5% !important;
+                }
+            }
+        }
 
+        .info-big {
+            .view-more-job {
+                button {
+                    min-width: 11.5rem !important;
+                    min-height: 3.5rem !important;
+                }
+            }
+        }
+
+        #job-info {
             .information {
                 grid-template-columns: repeat(auto-fit, minmax(18rem, 35rem)) !important;
                 gap: 1.5rem !important;
@@ -118,13 +140,21 @@
         display: none !important;
         }
 
-        #target {
-            width: 50% !important;
+        #about {
+            .about-content {
+                padding: 0 !important;
+                #target {
+                    width: 50% !important;
+                    padding-left: 0 !important;
+                }
+        
+                #personal-info {
+                    width: 50% !important; 
+                    padding-right: 0 !important;
+                }
+            }
         }
 
-        #personal-info {
-            width: 50% !important; 
-        }
 
         #job-info {
 

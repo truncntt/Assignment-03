@@ -7,9 +7,12 @@
     box-sizing: border-box;
     outline: none;
     text-decoration: none;
-    transition: all .2s linear;
     font-weight: 400;
     line-height: 1.5;
+}
+
+.hide {
+    display: none !important;
 }
 
 $white-100: #fff;
@@ -71,7 +74,7 @@ body {
     background-color: $white-100;
     overflow-x: hidden;
 
-    .container {
+    .container-div {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -175,7 +178,6 @@ body {
                 flex-wrap: wrap;
                 min-height: 43rem;
                 align-items: flex-start;
-
                 #target {
                     background-color: $white-50;
                     flex: 1 1 10rem;
@@ -184,7 +186,7 @@ body {
                     height: 100%;
                     width: 100%;
                     padding: 8rem 5.4rem;
-
+                    padding-left: 10%;
                     p {
                         font-size: 1.5rem;
                         font-weight: 100;
@@ -199,10 +201,31 @@ body {
                     height: 100%;
                     padding: 8rem 5.4rem 0 5.4rem;
                     background-color: $white-30;
+                    padding-right: 10%;
 
+                    form {
+                        div {
+                            .form-control {
+                                line-height: 2;
+                                font-size: 1.2rem;
+                                
+                            }
+                        }
+
+                        div {
+                            margin: 1.5rem 0 2.2rem 0;
+                            color: $text-p-100;
+                            font-size: 1.2rem;
+                        }
+                        .btn {
+                            background-color: $blue;
+                            font-size: 1.5rem;
+                            padding: 0.5rem 1rem;
+                            border: 1px solid $blue;
+                        } 
+                    }
                     ul {
                         list-style: none;
-
                         li {
                             cursor: pointer;
                             line-height: 3rem;
@@ -252,7 +275,7 @@ body {
                 justify-items: center;
 
                 div {
-                    padding: 3.25rem;
+                    padding: 3rem;
                     background-color: $white-100;
                     border: 1px solid $bd-black;
 
@@ -267,7 +290,7 @@ body {
                             list-style-position: outside;
                             font-size: 3rem;
                             color: $blue;
-                            margin-top: 2.2rem;
+                            margin-top: 1.5rem;
                             margin-left: 2rem;
                             padding-left: 1rem;
                             h4 {
@@ -297,6 +320,34 @@ body {
                 .info-big {
                     height: 100%;
                     width: 100%;
+                    .view-more-job {
+                        position: relative;
+                        button {
+                            position: relative;
+                            top: 1rem;
+                            right: 0;
+                            min-width: 12rem ;
+                            min-height: 4rem ;
+                            background-color: #EEF1B7;
+                            border-radius: 2rem;
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            align-content: center;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            gap: 1rem;
+                            opacity: 0;
+                            border: none;
+                            &:hover {
+                                opacity: 1;
+                                transition: 0.2s;
+                            }
+                        }
+                    }
+                    
                     div {
                         padding: 0;
                         border: none;
@@ -304,14 +355,15 @@ body {
                         flex-wrap: nowrap;
                         justify-content: space-between;
                         align-items: baseline;
-
+                        // min-height: 2rem;
                         .icons-info {
+                            height: 1.5rem;
                             font-size: 6rem;
                             color: #A8B1B6;
                         }
                     }
 
-                    #info-small-like {
+                    .info-small-like {
 
                         display: grid;
                         border: none;
@@ -359,7 +411,7 @@ body {
 
                     }
 
-                    #info-tick {
+                    .info-tick {
                         display: block;
                         margin-top: 2.2rem;
                         div {
@@ -536,10 +588,10 @@ body {
                                     flex-wrap: nowrap;
 
                                     p:last-child {
-                                        -webkit-line-clamp: 3;
-                                        -webkit-box-orient: vertical;
-                                        overflow: hidden;
-                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3; //giới hạn số dòng văn bản hiển thị là 3
+                                        -webkit-box-orient: vertical; //xác định hướng hiển thị của box là chiều dọc.
+                                        overflow: hidden; //Ẩn bất kỳ nội dung vượt quá giới hạn 3 dòng
+                                        display: -webkit-box; //thiết lập kiểu hiển thị của phần tử.
                                     }
                                 }
                                 .mission-cv {
@@ -636,8 +688,8 @@ body {
 @media (min-width: 1025px) and (max-width: 1280px) {
 
     html {
-        font-size: 58%;
-        scroll-padding: 7rem;
+        font-size: 57%;
+        scroll-padding: 7rem; //xác định khoảng cách (khoảng lề) giữa phần tử và biên của vùng cuộn
     }
 }
 

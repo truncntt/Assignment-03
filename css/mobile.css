@@ -40,21 +40,31 @@
     display: grid !important;
     grid-template-columns: repeat(1, 100%) !important;
   }
+  html #about .about-content ul {
+    padding-left: 0 !important;
+  }
   html #job-info .information {
     grid-template-columns: repeat(auto-fit, minmax(31rem, 40rem)) !important;
     gap: 3rem !important;
     margin: 0 2% !important;
   }
-  html #job-info .information .info-big #info-small-like div {
+  html #job-info .information .info-big .view-more-job button {
+    min-width: 11.5rem !important;
+    min-height: 3.5rem !important;
+  }
+  html #job-info .information .info-big .info-small-like {
+    margin-top: 3.2rem !important;
+  }
+  html #job-info .information .info-big .info-small-like div {
     width: 7vw;
     display: flex !important;
     align-items: stretch !important;
     flex-wrap: wrap !important;
   }
-  html #job-info .information .info-big #info-small-like div div {
+  html #job-info .information .info-big .info-small-like div div {
     margin: auto !important;
   }
-  html #job-info .information .info-big #info-small-like div div i {
+  html #job-info .information .info-big .info-small-like div div i {
     font-size: 2.5rem !important;
   }
   html .certificate-info {

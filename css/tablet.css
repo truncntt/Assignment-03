@@ -10,6 +10,18 @@
   html .nav-bar-hidden {
     display: none !important;
   }
+  html #about .about-content #target {
+    width: 50% !important;
+    padding-left: 5% !important;
+  }
+  html #about .about-content #personal-info {
+    width: 50% !important;
+    padding-right: 5% !important;
+  }
+  html .info-big .view-more-job button {
+    min-width: 11.5rem !important;
+    min-height: 3.5rem !important;
+  }
   html #job-info .information {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 35rem)) !important;
     gap: 1.5rem !important;
@@ -92,11 +104,16 @@
   html .nav-bar-hidden {
     display: none !important;
   }
-  html #target {
-    width: 50% !important;
+  html #about .about-content {
+    padding: 0 !important;
   }
-  html #personal-info {
+  html #about .about-content #target {
     width: 50% !important;
+    padding-left: 0 !important;
+  }
+  html #about .about-content #personal-info {
+    width: 50% !important;
+    padding-right: 0 !important;
   }
   html #job-info .information {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem)) !important;
