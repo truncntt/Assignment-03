@@ -1,0 +1,165 @@
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 57%;
+    scroll-padding: 10rem;
+  }
+  html .nav-bar-hidden {
+    display: none !important;
+  }
+  html #job-info .information {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 35rem)) !important;
+    gap: 1.5rem !important;
+  }
+  html .certificate-info {
+    margin: auto 6% !important;
+    padding-bottom: 4.4rem !important;
+  }
+  html .certificate-info .section-title {
+    padding-top: 4.4rem !important;
+    padding-bottom: 4.4rem !important;
+    text-align: start;
+  }
+  html .certificate-info .certificate-div .items-certificate {
+    justify-content: center;
+    text-align: left;
+    display: inline-block !important;
+  }
+  html .certificate-info .certificate-div .items-certificate:first-child {
+    margin-right: 0 !important;
+  }
+  html .certificate-info .certificate-div .items-certificate img {
+    background: no-repeat;
+    min-width: 41vw;
+    background-size: cover !important;
+    background-position: center !important;
+    height: auto !important;
+  }
+  html .certificate-info .certificate-div .items-certificate div {
+    padding-left: 0 !important;
+    min-width: 30rem !important;
+  }
+  html .certificate-info .certificate-div .items-certificate:nth-child(2n) {
+    padding-left: 2rem !important;
+  }
+  html .certificate-info #certificate-page2 {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  html #project {
+    margin: auto 6% !important;
+  }
+  html #project h1 {
+    margin-top: 4.4rem !important;
+  }
+  html #project .projects .project {
+    min-width: 20rem !important;
+    padding: 10px !important;
+  }
+  html #project .projects .project .project-table .tb-cv {
+    font-size: 1.4rem !important;
+  }
+  html #project .projects .project .project-table .info-cv {
+    padding-left: 10px !important;
+  }
+  html #project .projects .project .project-table .info-cv span {
+    padding: 2px 10px 2px 10px !important;
+  }
+  html #project .projects .project .project-table .info-cv span, html #project .projects .project .project-table .info-cv i, html #project .projects .project .project-table .info-cv p {
+    margin-right: 15px;
+  }
+  html #project .projects .project .project-table .info-cv .icon-last {
+    margin-left: 6.5rem;
+  }
+}
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 57%;
+    scroll-padding: 10rem;
+  }
+  html .nav-bar-hidden {
+    display: none !important;
+  }
+  html #target {
+    width: 50% !important;
+  }
+  html #personal-info {
+    width: 50% !important;
+  }
+  html #job-info .information {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem)) !important;
+    gap: 1.5rem !important;
+  }
+  html .certificate-info {
+    margin: auto 6% !important;
+    padding-bottom: 4.4rem !important;
+  }
+  html .certificate-info .section-title {
+    padding-top: 4.4rem !important;
+    padding-bottom: 4.4rem !important;
+    text-align: start;
+  }
+  html .certificate-info .certificate-div .items-certificate {
+    justify-content: center;
+    text-align: left;
+    display: inline-block !important;
+  }
+  html .certificate-info .certificate-div .items-certificate img {
+    background: no-repeat;
+    min-width: 41vw;
+    background-size: cover !important;
+    background-position: center !important;
+    height: auto !important;
+  }
+  html .certificate-info .certificate-div .items-certificate div {
+    padding-left: 0 !important;
+    min-width: 30rem !important;
+  }
+  html .certificate-info .certificate-div .items-certificate:nth-child(2n) {
+    padding-left: 2rem !important;
+  }
+  html .certificate-info #certificate-page2 {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  html #project {
+    margin: auto 5% !important;
+  }
+  html #project h1 {
+    margin-top: 4.4rem !important;
+  }
+  html #project .projects {
+    grid-template-columns: repeat(2, auto) !important;
+  }
+  html #project .projects .project {
+    min-width: 20rem !important;
+    padding: 10px !important;
+  }
+  html #project .projects .project .tb-cv {
+    font-size: 1.4rem !important;
+  }
+  html #project .projects .project .info-cv span {
+    padding: 2px 10px 2px 10px !important;
+  }
+  html #project .projects .project .info-cv span, html #project .projects .project .info-cv i, html #project .projects .project .info-cv p {
+    margin-right: 15px;
+  }
+  html #project .projects .project .info-cv .icon-last {
+    margin-left: 6.5rem;
+  }
+}
+
+/*# sourceMappingURL=tablet.css.map */

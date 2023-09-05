@@ -1,0 +1,124 @@
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 55% !important;
+    scroll-padding: 10rem;
+  }
+  html #banner h1 {
+    font-size: 2.5vh !important;
+  }
+  html #banner span {
+    font-size: 1.8vh !important;
+  }
+  html #nav-bar {
+    height: auto !important;
+  }
+  html #nav-bar .nav-bar-info {
+    grid-template-columns: repeat(1, auto) !important;
+    grid-template-rows: repeat(4, auto) !important;
+    z-index: 1;
+  }
+  html #nav-bar .nav-bar-info a {
+    display: block !important;
+    height: 4rem !important;
+    text-align: left !important;
+    border: none !important;
+  }
+  html #nav-bar .nav-bar-info a:first-child {
+    margin-top: 1rem !important;
+  }
+  html #nav-bar .nav-bar-info a i, html #nav-bar .nav-bar-info a p {
+    display: inline !important;
+  }
+  html #nav-bar .nav-bar-info .nav-bar-hidden {
+    display: none !important;
+  }
+  html #about .about-content {
+    display: grid !important;
+    grid-template-columns: repeat(1, 100%) !important;
+  }
+  html #job-info .information {
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 40rem)) !important;
+    gap: 3rem !important;
+    margin: 0 2% !important;
+  }
+  html #job-info .information .info-big #info-small-like div {
+    width: 7vw;
+    display: flex !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+  }
+  html #job-info .information .info-big #info-small-like div div {
+    margin: auto !important;
+  }
+  html #job-info .information .info-big #info-small-like div div i {
+    font-size: 2.5rem !important;
+  }
+  html .certificate-info {
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 4.4rem;
+  }
+  html .certificate-info h1 {
+    padding-top: 4.4rem !important;
+    padding-bottom: 4.4rem !important;
+    margin-left: 2rem !important;
+  }
+  html .certificate-info .certificate-div {
+    grid-template-columns: repeat(1, auto) !important;
+    justify-content: center !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  html .certificate-info .certificate-div .items-certificate {
+    display: block !important;
+    margin: auto !important;
+  }
+  html .certificate-info .certificate-div .items-certificate img {
+    width: 34rem !important;
+    height: auto !important;
+  }
+  html .certificate-info .certificate-div .items-certificate div {
+    min-width: 1rem !important;
+  }
+  html .certificate-info .certificate-div .items-certificate:first-child {
+    border-bottom: 1px solid #DDCCA3;
+    padding-bottom: 20px;
+  }
+  html .certificate-info .certificate-div .items-certificate:nth-child(2n) {
+    padding-left: 0 !important;
+    border-bottom: 1px solid #DDCCA3 !important;
+    border-left: none !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  html .certificate-info #certificate-page2 {
+    margin-top: 0 !important;
+  }
+  html .certificate-info #certificate-page2 .items-certificate {
+    border: none !important;
+    padding-top: 20px !important;
+    padding-bottom: 0 !important;
+  }
+  html #project {
+    margin: 4.4rem 0 0 0 !important;
+  }
+  html #project div h1 {
+    margin-left: 2rem !important;
+  }
+  html #project .projects {
+    grid-template-columns: repeat(1, auto) !important;
+  }
+  html #project .projects .project {
+    margin: 0 5% !important;
+  }
+  html #footer .footer-info a p {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */

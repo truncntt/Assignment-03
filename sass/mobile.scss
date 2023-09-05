@@ -1,0 +1,157 @@
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    html {
+        font-size: 55% !important;
+        scroll-padding: 10rem;
+
+        #banner {
+            h1 {
+                font-size: 2.5vh !important;
+            }
+            span {
+                font-size: 1.8vh !important;
+            }
+        }
+
+        #nav-bar {
+            height: auto !important;
+            .nav-bar-info {
+                grid-template-columns: repeat(1, auto) !important;
+                grid-template-rows: repeat(4, auto) !important;
+                z-index: 1;
+                a {
+                    display: block !important;
+                    height: 4rem !important;
+                    text-align: left !important;
+                    border: none !important;
+
+                    &:first-child {
+                        margin-top: 1rem !important;
+                    }
+                    i,p {
+                        display: inline !important;
+                    }
+                }
+                .nav-bar-hidden {
+                    display: none !important;
+                }
+            }
+        }
+
+        #about {
+            .about-content {
+                display: grid !important;
+                grid-template-columns: repeat(1, 100%) !important;
+            }
+        }
+
+        #job-info {
+
+            .information {
+                grid-template-columns: repeat(auto-fit, minmax(31rem, 40rem)) !important;
+                gap: 3rem !important;
+                margin: 0 2% !important;
+                .info-big {
+                    #info-small-like {
+                        div {
+                            width: 7vw;
+                            display: flex !important;
+                            align-items: stretch !important;
+                            flex-wrap: wrap !important;
+
+                            div {
+                                margin: auto !important;
+                                i {
+                                    font-size: 2.5rem !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .certificate-info {
+            margin: 0 !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding-bottom: 4.4rem;
+            h1 {
+                padding-top: 4.4rem !important;
+                padding-bottom: 4.4rem !important;
+                margin-left: 2rem !important    ;
+            }
+            
+            .certificate-div {
+                grid-template-columns: repeat(1, auto) !important;
+                justify-content: center !important;
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+                .items-certificate {
+                    display: block !important;
+                    margin: auto !important;
+                    img {
+                        width: 34rem !important;
+                        height: auto !important;
+                    }
+                    div {
+                        min-width: 1rem !important;
+                    }
+        
+                    &:first-child {
+                        border-bottom: 1px solid #DDCCA3;
+                        padding-bottom: 20px;
+                    }                    
+
+                    &:nth-child(2n) {
+                        padding-left: 0 !important; 
+                        border-bottom: 1px solid #DDCCA3 !important;
+                        border-left: none !important;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+
+                    }
+                }
+            }
+
+            #certificate-page2 {
+                margin-top: 0 !important;
+                .items-certificate {
+                    border: none !important;
+                    padding-top: 20px !important;
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+
+        #project {
+            margin: 4.4rem 0 0 0 !important;
+            div {
+                h1 {
+                    margin-left: 2rem !important;
+                }
+            }
+            .projects {
+                grid-template-columns: repeat(1, auto) !important;
+                .project {
+                    margin: 0 5% !important;
+                }
+            }
+        }
+
+        #footer {
+            .footer-info {
+                a {
+                    p {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
