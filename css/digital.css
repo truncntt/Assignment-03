@@ -244,8 +244,8 @@ p {
   html body .main-container #scopes .scopes-items #scopes-in:last-child, html body .main-container #scopes .scopes-items #scopes-out:last-child {
     padding-top: 0.5rem !important;
   }
-  html body .main-container #primary .primary-items i {
-    height: 50% !important;
+  html body .main-container #primary .primary-items i:first-child {
+    margin-top: 1rem !important;
   }
   html body .main-container #timeline div .timeline-items {
     margin-top: 1.5rem !important;
@@ -321,8 +321,8 @@ p {
   html body .main-container #scopes .scopes-items #scopes-in:last-child, html body .main-container #scopes .scopes-items #scopes-out:last-child {
     padding-top: 0.5rem !important;
   }
-  html body .main-container #primary .primary-items i {
-    height: 50% !important;
+  html body .main-container #primary .primary-items i:first-child {
+    margin-top: 1rem !important;
   }
   html body .main-container #timeline div .timeline-items {
     margin-top: 1.5rem !important;
@@ -398,8 +398,8 @@ p {
   html body .main-container #scopes .scopes-items #scopes-in:last-child, html body .main-container #scopes .scopes-items #scopes-out:last-child {
     padding-top: 0.5rem !important;
   }
-  html body .main-container #primary .primary-items i {
-    height: 50% !important;
+  html body .main-container #primary .primary-items i:first-child {
+    margin-top: 1rem !important;
   }
   html body .main-container #timeline div .timeline-items {
     margin-top: 1.5rem !important;
