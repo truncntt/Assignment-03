@@ -1,9 +1,19 @@
 
-```
-Assignment 02 Stater
+## Trang Web của Tôi
+
+Xin chào! Đây là trang web của tôi, nơi bạn có thể tìm hiểu thêm về dự án và công việc của tôi.
+
+- Website: [Assignment 03](https://truncntt.github.io/Assignment-03/)
+
+Assignment 03 Stater
 ├─ css
+│  ├─ laptop.css
+│  ├─ tablet.css
+│  ├─ mobile.css
+│  ├─ digital.css
 │  ├─ font.css
 │  └─ style.css
+
 ├─ fonts
 │  ├─ OpenSans-Italic-webfont.eot
 │  ├─ OpenSans-Italic-webfont.svg
@@ -36,13 +46,26 @@ Assignment 02 Stater
 ├─ icon-list.html
 ├─ images
 │  ├─ Cert_PRF.png
+│  ├─ Cert_PRF.png
 │  ├─ Cert_WEB.png
 │  ├─ banner.jpg
 │  ├─ default-avatar.webp
 │  ├─ funix-icon.png
-│  ├─ project_1.png
-│  ├─ project_2.png
-│  └─ project_3.png
-└─ index.html
-
-```
+│  ├─ img-book.png
+│  ├─ img-card.png
+│  ├─ img-christmas.png
+│  ├─ img-cv.png
+│  ├─ img-fisness.png
+│  ├─ img-food.png
+│  ├─ img-groco.png
+│  ├─ img-profile.png
+│  └─ img-seo.png
+├─ js
+│  └─ script.js
+├─ sass
+│  ├─ laptop.scss
+│  ├─ tablet.scss
+│  ├─ mobile.scss
+│  └─ digital.scss
+├─ index.html
+└─ digital-cv.html
