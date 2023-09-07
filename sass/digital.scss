@@ -1,13 +1,645 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0; padding: 0;
-    box-sizing: border-box;
     outline: none;
     text-decoration: none;
     font-weight: 400;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 
 $blue: #0000FF;
 $text: #212529;
 $purple: #9D88FF;
+$white: #FFF;
+$black: #000;
+$border: #296b9e47;
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    padding: 5%;
+    height: 100%;
+}
+
+.select-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $blue;
+    margin-block-start: 1.5rem;
+    margin-block-end: 1.5rem;
+}
+
+.item-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.gird {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+}
+
+p {
+    -webkit-line-clamp: 3; //giới hạn số dòng văn bản hiển thị là 3
+    -webkit-box-orient: vertical; //xác định hướng hiển thị của box là chiều dọc.
+    overflow: hidden; //Ẩn bất kỳ nội dung vượt quá giới hạn 3 dòng
+    display: -webkit-box; //thiết lập kiểu hiển thị của phần tử.
+}
+/* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    height: 100%;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: $blue !important;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    .item-child {
+        background: $white;
+        font-size: 1rem;
+        padding: 0 2rem;
+        width: 100%;
+        .title-h1 {
+            width: 100%;
+            border-bottom: 1px solid #296b9e;
+            opacity: 0.7;
+        }
+    }
+    
+    #goals {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+
+        .goal-items {
+            .item {
+                display: flex;
+                width: 100%;
+                border-bottom: 1px solid $border;
+                padding: 0.7rem 2rem 0.7rem 0;
+                align-items: center;
+                
+                i {
+                    font-size: 2.5rem;
+                    padding: 0 3rem;
+                }
+                .goal-item-info {
+                    span {
+                        font-size: 1.45rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #team {
+        grid-column: 3 / 4;
+        grid-row: 1 / 4;
+
+        .team-items {
+
+            div {
+                display: flex;
+                margin: 0.25rem 0;
+                i {
+                    font-size: 2.5rem;
+                    padding: 0 1.5rem;
+                }
+
+                div {
+                    display: block;
+                    margin-left: 0.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    #scopes {
+        grid-column: 1 / 3;
+        grid-row: 4 / 6;
+
+        .scopes-items {
+            display: flex;
+            width: 100%;
+            div {
+                flex: 1 1 1rem;
+                width: 100%;
+                padding: 1rem 3rem 0 1rem; 
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-block-end: 1rem;
+                }
+
+                div {
+                    padding: 0;
+                    p {
+                        font-size: 1.45rem;
+                        margin-block-start: 1rem;
+                        margin-right: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #primary {
+        grid-column: 3 / 4;
+        grid-row: 4 / 6;
+
+        .primary-items {
+            display: flex;
+            // padding-bottom: 1rem;
+            i {
+                font-size: 2.3rem;
+                color: $black;
+                padding: 1rem;
+            }
+            p {
+                padding: 0.5rem 1.5rem 0rem 1rem;
+                font-size: 1.45rem;
+            }
+        }
+    }
+
+    #timeline {
+        grid-column: 4 / 5;
+        grid-row: 1 / 6;
+
+        .gird {
+            .timeline-items {
+                display: flex;
+                width: 100%;
+                padding: 0;
+                justify-content: flex-start;
+                align-items: center;
+                .number {
+                    display: flex;
+                    min-width: 4.7rem;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    background-color: $purple;
+                    border-radius: 50%;
+                    width: 4rem;
+                    height: 4.5rem;
+                    margin: 0.86rem; /* Khoảng cách giữa các biểu tượng */
+                    border: 1px solid #296b9e;
+                    font-size: 1.5rem;
+                    color: $white;
+                    font-weight: bold;
+                }
+
+                .timeline-info {
+                    display: block;
+                    padding: 0.86rem 0.86rem 0 0.86rem;
+                    border-bottom: 1px dashed #51BDC2;
+
+                    p {
+                        font-size: 1.45rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    html {
+        font-size: 60%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+
+        .media-block {
+            display: block !important;
+            align-items: center !important;
+            justify-items: center;
+        }
+
+        .i-center {
+            display: block !important;
+            position: relative;
+            left: 50%;
+            width: 28px !important;
+            top: 0%;
+            padding: 0 !important;
+            margin: 0 !important;
+            transform: translate(-50%, 0%);
+        }
+
+        i {
+            font-size: 3rem !important;
+        }
+
+        body {
+            height: auto !important;
+            .main-container {
+                grid-template-columns: repeat(2, auto) !important;
+                
+                .item-child {
+                    grid-column: 1 !important;
+                    grid-row: auto !important;
+                    padding-bottom: 2rem !important;
+                }
+                
+                #goals {
+                    .item {
+                        padding: 1.5rem !important;
+                        i {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                #scopes {
+                    .scopes-items {
+                        display: block !important;
+                        #scopes-in, #scopes-out {
+                            padding: 1.5rem !important;
+                            
+                            &:last-child {
+                                padding-top: 0.5rem !important;
+                            }
+                        }
+                    }
+                }
+
+                #primary {
+                    .primary-items {
+                        i {
+                            height: 50% !important;
+                        }
+                    }
+                }
+
+                #timeline {
+                    div {
+                        .timeline-items {
+                            margin-top: 1.5rem !important;
+                            .number {
+                                display: flex !important;
+                                width: 6rem !important;
+                                height: 5.7rem !important;
+                                margin-bottom: 0 !important;
+                            &:first-child {
+                                margin-top: 0 !important;
+                            }
+                        }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.6rem !important;
+                }
+
+                .item-title {
+                    font-size: 1.8rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 58%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+
+        .media-block {
+            display: block !important;
+            align-items: center !important;
+            justify-items: center;
+        }
+
+        .i-center {
+            display: block !important;
+            position: relative;
+            left: 50%;
+            width: 28px !important;
+            top: 0%;
+            padding: 0 !important;
+            margin: 0 !important;
+            transform: translate(-50%, 0%);
+        }
+
+        i {
+            font-size: 3rem !important;
+        }
+
+        body {
+            height: auto !important;
+            .main-container {
+                grid-template-columns: repeat(1, auto) !important;
+                
+                .item-child {
+                    grid-column: 1 !important;
+                    grid-row: auto !important;
+                    padding-bottom: 2rem !important;
+                }
+                
+                #goals {
+                    .item {
+                        padding: 1.5rem !important;
+                        i {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                #scopes {
+                    .scopes-items {
+                        display: block !important;
+                        #scopes-in, #scopes-out {
+                            padding: 1.5rem !important;
+                            
+                            &:last-child {
+                                padding-top: 0.5rem !important;
+                            }
+                        }
+                    }
+                }
+
+                #primary {
+                    .primary-items {
+                        i {
+                            height: 50% !important;
+                        }
+                    }
+                }
+
+                #timeline {
+                    div {
+                        .timeline-items {
+                            margin-top: 1.5rem !important;
+                            .number {
+                                display: flex !important;
+                                width: 6rem !important;
+                                height: 5.7rem !important;
+                                margin-bottom: 0 !important;
+                            &:first-child {
+                                margin-top: 0 !important;
+                            }
+                        }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.6rem !important;
+                }
+
+                .item-title {
+                    font-size: 1.8rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 480px to 767px
+*/
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    html {
+        font-size: 56%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+
+        .media-block {
+            display: block !important;
+            align-items: center !important;
+            justify-items: center;
+        }
+
+        .i-center {
+            display: block !important;
+            position: relative;
+            left: 50%;
+            width: 26px !important;
+            top: 0%;
+            padding: 0 !important;
+            margin: 0 !important;
+            transform: translate(-50%, 0%);
+        }
+
+        i {
+            font-size: 3rem !important;
+        }
+
+        body {
+            height: auto !important;
+            .main-container {
+                grid-template-columns: repeat(1, auto) !important;
+                
+                .item-child {
+                    grid-column: 1 !important;
+                    grid-row: auto !important;
+                    padding-bottom: 2rem !important;
+                }
+                
+                #goals {
+                    .item {
+                        padding: 1.5rem !important;
+                        i {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                #scopes {
+                    .scopes-items {
+                        display: block !important;
+                        #scopes-in, #scopes-out {
+                            padding: 1.5rem !important;
+                            
+                            &:last-child {
+                                padding-top: 0.5rem !important;
+                            }
+                        }
+                    }
+                }
+
+                #primary {
+                    .primary-items {
+                        i {
+                            height: 50% !important;
+                        }
+                    }
+                }
+
+                #timeline {
+                    div {
+                        .timeline-items {
+                            margin-top: 1.5rem !important;
+                            .number {
+                                display: flex !important;
+                                width: 6rem !important;
+                                height: 5.7rem !important;
+                                margin-bottom: 0 !important;
+                            &:first-child {
+                                margin-top: 0 !important;
+                            }
+                        }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.6rem !important;
+                }
+
+                .item-title {
+                    font-size: 1.8rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    html {
+        font-size: 55%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+
+        .media-block {
+            display: block !important;
+            align-items: center !important;
+            justify-items: center;
+        }
+
+        .i-center {
+            display: block !important;
+            position: relative;
+            left: 50%;
+            width: 26px !important;
+            top: 0%;
+            padding: 0 !important;
+            margin: 0 !important;
+            transform: translate(-50%, 0%);
+        }
+
+        i {
+            font-size: 3rem !important;
+        }
+
+        body {
+            height: auto !important;
+            .main-container {
+                grid-template-columns: repeat(1, auto) !important;
+                
+                .item-child {
+                    grid-column: 1 !important;
+                    grid-row: auto !important;
+                    padding-bottom: 2rem !important;
+                }
+                
+                #goals {
+                    .item {
+                        padding: 1.5rem !important;
+                        i {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                #scopes {
+                    .scopes-items {
+                        display: block !important;
+                        #scopes-in, #scopes-out {
+                            padding: 1.5rem !important;
+                            
+                            &:last-child {
+                                padding-top: 0.5rem !important;
+                            }
+                        }
+                    }
+                }
+
+                #primary {
+                    .primary-items {
+                        i {
+                            &:first-child {
+                                margin-top: 1rem !important;
+                            }
+                        }
+                    }
+                }
+
+                #timeline {
+                    div {
+                        .timeline-items {
+                            margin-top: 1.5rem !important;
+                            .number {
+                                display: flex !important;
+                                width: 6rem !important;
+                                height: 5.7rem !important;
+                                margin-bottom: 0 !important;
+                                &:first-child {
+                                    margin-top: 0 !important;
+                                }
+                            }
+                            P {
+                                &:first-child {
+                                    font-size: 1.6rem !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem !important;
+                }
+
+                .item-title {
+                    font-size: 1.7rem !important;
+                }
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
     const errorMessage = document.getElementById("error-message");
 
         document.getElementById("data-form").addEventListener("submit", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Ngăn chặn hành động mặc định của sự kiện click
 
             const enteredEmail = emailInput.value.trim();
             
@@ -21,8 +21,8 @@
 
         function isValidEmail(email) {
             // Sử dụng một biểu thức chính quy đơn giản để kiểm tra định dạng email
-            const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return emailPattern.test(email);
+            const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return regex.test(email);
         }
 
 
