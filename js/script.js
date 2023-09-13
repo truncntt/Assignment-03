@@ -25,35 +25,23 @@
             return regex.test(email);
         }
 
+        // Lấy ra tất cả các nút "View More" bằng class
+        const viewMoreButtons = document.querySelectorAll(".view-more-button");
+        const showInfoElements = document.querySelectorAll(".show-info");
 
-    // Lấy ra tất cả các nút "View More" bằng class
-    const viewMoreButtons = document.querySelectorAll(".view-more-button");
-    const showInfoElements = document.querySelectorAll(".show-info");
-
-    // Biến để kiểm tra trạng thái hiện tại
-    let isExpanded = false;
-
-    // Bắt sự kiện click trên từng nút "View More"
-    viewMoreButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            // Toggle lớp CSS "hide" trên tất cả các phần tử show-info
-
-            showInfoElements.forEach(function (showInfo) {
-                showInfo.classList.toggle("hide");
-            });
-            
-            // Thay đổi nội dung nút dựa vào trạng thái hiện tại
-            isExpanded = !isExpanded;
-            if (isExpanded) {
-                viewMoreButtons.forEach(function (button) {
-                    button.innerHTML = '<i class="bi bi-caret-up-fill"></i><p>View Less</p>';
-                });
-            } else {
-                viewMoreButtons.forEach(function (button) {
+        // Bắt sự kiện click trên từng nút "View More"
+        viewMoreButtons.forEach(function (button, index) {
+            button.addEventListener("click", function () {
+                // Toggle lớp CSS "hide" trên phần tử show-info cùng vị trí index
+                showInfoElements[index].classList.toggle("hide");
+                
+                // Thay đổi nội dung nút dựa vào trạng thái hiện tại
+                if (showInfoElements[index].classList.contains("hide")) {
                     button.innerHTML = '<i class="bi bi-caret-down-fill"></i><p>View More</p>';
-                });
-            }
+                } else {
+                    button.innerHTML = '<i class="bi bi-caret-up-fill"></i><p>View Less</p>';
+                }
+            });
         });
-    });
 
 
